@@ -15,10 +15,11 @@ sorted: return a new array that is sorted in ascending order. Elements need to c
 
 ````let numbers: [Int] = [0,1,4,7,3,5,6,2]
    let ascendingNumbers = numbers.sorted()
-   print(numbers) // [0,1,2,3,4,5,6,7]```
+   print(numbers) // [0,1,2,3,4,5,6,7]
+```
 
 You can also shorten the syntax with this way:
-```let ascendingNumbers = numbers.sorted(by: >)```
+`let ascendingNumbers = numbers.sorted(by: >)`
 
 map: iterates and changes the elements based on the condition passed inside the closure
 ```let numbersAsStrings = numbers.map(transforms: (Int) throws -> T)
@@ -29,12 +30,12 @@ map: iterates and changes the elements based on the condition passed inside the 
 filter: return an array that has only the elements that passes the condition specified.
 
 ```let numbersAsString = numbers.filter(isIncluded: (Int) throws -> Bool)
-    let numbersLessThanFive - numbers.filter { $0 < 5 }
+   let numbersLessThanFive - numbers.filter { $0 < 5 }
 ```
 
 reduce: combine all the elements in an array and return an object of any type (Generics),
 initialResult or first parameter tells us where to start, nextPartialResult is the condition
 
 ```numbers.reduce(initialResult: Result, nextPartialResult: (Result, Int) throws -> Result)
-    let sumOfAllNumbers = numbers.reduce("") { $0 + String($1) }
+   let sumOfAllNumbers = numbers.reduce("") { $0 + String($1) }
 ```
