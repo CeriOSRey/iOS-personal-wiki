@@ -13,7 +13,7 @@ Higher order functions: functions that operate on other functions
 
 sorted: return a new array that is sorted in ascending order. Elements need to conform to Comparable protocol
 
-````let numbers: [Int] = [0,1,4,7,3,5,6,2]
+```let numbers: [Int] = [0,1,4,7,3,5,6,2]
    let ascendingNumbers = numbers.sorted()
    print(numbers) // [0,1,2,3,4,5,6,7]
 ```
@@ -22,10 +22,11 @@ You can also shorten the syntax with this way:
 `let ascendingNumbers = numbers.sorted(by: >)`
 
 map: iterates and changes the elements based on the condition passed inside the closure
+
 ```let numbersAsStrings = numbers.map(transforms: (Int) throws -> T)
    let strings = numbers.map { String($0) }
    print(strings)
-````
+```
 
 filter: return an array that has only the elements that passes the condition specified.
 
